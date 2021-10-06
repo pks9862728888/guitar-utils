@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "guitar-utils"
+    }
+  },
+  "defaultProject": "guitar-utils",
+  "cli": {
+    "analytics": false
+  }
 }

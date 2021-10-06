@@ -1,0 +1,17 @@
+.fretboard-strings {
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+    z-index: 0;
+}
+
+.frets {
+    border-right: 1px solid black;
+    height: 10.35rem;
+    width: 0px;
+    z-index: 1;
+    display: flex;
+}
+
+.initial-fret {
+    border-right: 3px solid black;
+}
