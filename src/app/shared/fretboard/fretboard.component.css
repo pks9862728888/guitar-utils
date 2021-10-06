@@ -1,3 +1,8 @@
+.string-name {
+    margin-top: -177px;
+    z-index: 3;
+}
+
 .fretboard-strings {
     border-bottom: 1px solid black;
     margin-bottom: 2rem;

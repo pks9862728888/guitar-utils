@@ -1,6 +1,19 @@
-<div *ngFor="let string of range(6)" class="fretboard-strings" [style.width.px]="fretboardWidth"></div>
-<div class="frets initial-fret" style="margin-top: -198px"></div>
-<div *ngFor="let fret of range(22)" class="frets" [style.margin-top.px]="getTopMarginOfFret(fret)" [style.margin-left.px]="getLeftMarginOfFret(fret)"></div>
-<section class="d-flex">
+<!-- Frets and Strings -->
+<section class="m-l-15r">
+    <div *ngFor="let string of range(6)" class="fretboard-strings" [style.width.px]="fretboardWidth"></div>
+    <div class="frets initial-fret" style="margin-top: -198px"></div>
+    <div *ngFor="let fret of range(22)" class="frets" [style.margin-top.px]="getTopMarginOfFret(fret)" [style.margin-left.px]="getLeftMarginOfFret(fret)"></div>
+</section>
+<!-- String names -->
+<section class="d-flex flex-column string-name">
+    <div class="m-b-05r">E<em><sub>l</sub></em></div>
+    <div class="m-b-05r">B</div>
+    <div class="m-b-05r">G</div>
+    <div class="m-b-05r">D</div>
+    <div class="m-b-05r">A</div>
+    <div class="m-b-05r">E<em><sub>h</sub></em></div>
+</section>
+<!-- Fret numbers -->
+<section class="d-flex m-t--05r m-l-15r">
     <span *ngFor="let fret of range(22)" [style.margin-left.px]="getFretNumberMarginLeft(fret)">{{ fret }}</span>
 </section>
