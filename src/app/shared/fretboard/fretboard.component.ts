@@ -12,6 +12,7 @@ export class FretboardComponent implements OnInit {
   fretWidth = 50;
   fretboardWidth = this.fretWidth * 22;
   fretMarginTop = [-165, -165.5, -165.7, -165.9, -166.1, -165, -165.2, -165.6, -165.8, -165.8, -165.8, -165.8, -165.8, -165.8, -165.6, -165.6, -165.6, -165.6, -165.6, -165.6, -165.6, -165];
+  fretNoMarginLeft = [20, 42, 44, 40, 40, 40, 42, 44, 40, 37, 34, 30, 34, 34, 34, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32];
 
   constructor() { }
 
@@ -33,6 +34,17 @@ export class FretboardComponent implements OnInit {
   getTopMarginOfFret(no: number) : number {
     var count = 1;
     for (let i of this.fretMarginTop) {
+      if (no == count) {
+        return +i;
+      } else {
+        count += 1;
+      }
+    }
+  }
+
+  getFretNumberMarginLeft(no: number) : number {
+    var count = 1;
+    for (let i of this.fretNoMarginLeft) {
       if (no == count) {
         return +i;
       } else {
