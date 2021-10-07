@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class NoteComponent implements OnInit {
 
   @Input() noteName: string;
+  @Input() rgbaOverlayColor: string;
 
   constructor() { }
 

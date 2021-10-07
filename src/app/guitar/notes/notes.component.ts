@@ -7,12 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotesComponent implements OnInit {
 
+  // Guitar notes on frets
   private Elow = 'FOGOAOBCODOEFOGOAOBCOD';
   private B = 'CODOEFOGOAOBCODOEFOGOA';
   private G = 'OAOBCODOEFOGOAOBCODOEF';
   private D = 'OEFOGOAOBCODOEFOGOAOBC';
   private A = 'OBCODOEFOGOAOBCODOEFOG';
   private Ehigh = 'FOGOAOBCODOEFOGOAOBCOD';
+
+  // Overlay color for various notes
+  private AOverlayColor = 'rgba(255, 198, 0, 1)';
+  private BOverlayColor = 'rgba(152, 116, 243, 1)';
+  private COverlayColor = 'rgba(0, 196, 253, 1)';
+  private DOverlayColor = 'rgba(250, 31, 109, 1)';
+  private EOverlayColor = 'rgba(24, 0, 255, 1)';
+  private FOverlayColor = 'rgba(66, 253, 0, 1)';
+  private GOverlayColor = 'rgba(216, 0, 255, 1)';
+  private HiddenColor = 'rgba(255, 255, 255, 0)';
 
   filteredNotes: string[][];
 
@@ -31,7 +42,6 @@ export class NotesComponent implements OnInit {
     notes.push(this.getSplittedNotes(this.A, filter));
     notes.push(this.getSplittedNotes(this.Ehigh, filter));
 
-    console.log(notes);
     return notes;
   }
 
@@ -46,6 +56,26 @@ export class NotesComponent implements OnInit {
       }
     }
     return splittedNotes;
+  }
+
+  getOverlayColor(note: string): string {
+    if (note === 'A') {
+      return this.AOverlayColor;
+    } else if (note === 'B') {
+      return this.BOverlayColor;
+    } else if (note === 'C') {
+      return this.COverlayColor;
+    } else if (note === 'D') {
+      return this.DOverlayColor;
+    } else if (note === 'E') {
+      return this.EOverlayColor;
+    } else if (note === 'F') {
+      return this.FOverlayColor;
+    } else if (note === 'G') {
+      return this.GOverlayColor;
+    } else {
+      return this.HiddenColor;
+    }
   }
 
 }
