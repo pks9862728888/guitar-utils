@@ -1,0 +1,6 @@
+<app-fretboard></app-fretboard>
+<section class="note-section">
+    <div *ngFor="let stringNotes of filteredNotes" class="m-b-55r">
+        <app-note *ngFor="let note of stringNotes" [noteName]="note" class="m-r-55r"></app-note>
+    </div>
+</section>
