@@ -26,6 +26,7 @@ export class NotesComponent implements OnInit {
   private HiddenColor = 'rgba(255, 255, 255, 0)';
 
   filteredNotes: string[][];
+  note: string;
 
   constructor() { }
 
@@ -42,6 +43,7 @@ export class NotesComponent implements OnInit {
     notes.push(this.getSplittedNotes(this.A, filter));
     notes.push(this.getSplittedNotes(this.Ehigh, filter));
 
+    this.note = filter;
     this.filteredNotes = notes;
   }
 

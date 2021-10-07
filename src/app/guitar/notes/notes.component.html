@@ -4,36 +4,40 @@
         <app-note *ngFor="let note of stringNotes" [noteName]="note" [rgbaOverlayColor]="getOverlayColor(note)" class="m-r-89r"></app-note>
     </div>
 </section>
-<div class="m-l-15r d-flex">
+<div class="m-l-15r d-flex filters">
     <div class="p-r-1r">
         <h5>Filters:</h5>
     </div>
     <div class="p-r-1r" (click)="filterNotes('*')">
-        <input type="radio" id="all" name="note" class="m-r-05r" checked="true">
+        <input type="radio" id="all" name="note" class="m-r-05r" [checked]="note === '*'">
         <label for="all">All</label>
     </div>
     <div class="p-r-1r" (click)="filterNotes('A')">
-        <input type="radio" id="A" name="note" class="m-r-05r">
+        <input type="radio" id="A" name="note" class="m-r-05r" [checked]="note === 'A'">
         <label for="A">A</label>
     </div>
     <div class="p-r-1r" (click)="filterNotes('B')">
-        <input type="radio" id="B" name="note" class="m-r-05r">
+        <input type="radio" id="B" name="note" class="m-r-05r" [checked]="note === 'B'">
         <label for="B">B</label>
     </div>
     <div class="p-r-1r" (click)="filterNotes('C')">
-        <input type="radio" id="C" name="note" class="m-r-05r">
+        <input type="radio" id="C" name="note" class="m-r-05r" [checked]="note === 'C'">
         <label for="C">C</label>
     </div>
     <div class="p-r-1r" (click)="filterNotes('D')">
-        <input type="radio" id="D" name="note" class="m-r-05r">
+        <input type="radio" id="D" name="note" class="m-r-05r" [checked]="note === 'D'">
         <label for="D">D</label>
     </div>
     <div class="p-r-1r" (click)="filterNotes('E')">
-        <input type="radio" id="E" name="note" class="m-r-05r">
+        <input type="radio" id="E" name="note" class="m-r-05r" [checked]="note === 'E'">
         <label for="E">E</label>
     </div>
     <div class="p-r-1r" (click)="filterNotes('F')">
-        <input type="radio" id="F" name="note" class="m-r-05r">
+        <input type="radio" id="F" name="note" class="m-r-05r" [checked]="note === 'F'">
         <label for="F">F</label>
+    </div>
+    <div class="p-r-1r" (click)="filterNotes('G')">
+        <input type="radio" id="G" name="note" class="m-r-05r" [checked]="note === 'G'">
+        <label for="G">G</label>
     </div>
 </div>
