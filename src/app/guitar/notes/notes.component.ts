@@ -8,12 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class NotesComponent implements OnInit {
 
   // Guitar notes on frets
-  private Elow = 'FOGOAOBCODOEFOGOAOBCOD';
-  private B = 'CODOEFOGOAOBCODOEFOGOA';
-  private G = 'OAOBCODOEFOGOAOBCODOEF';
-  private D = 'OEFOGOAOBCODOEFOGOAOBC';
-  private A = 'OBCODOEFOGOAOBCODOEFOG';
-  private Ehigh = 'FOGOAOBCODOEFOGOAOBCOD';
+  // private Elow = 'FOGOAOBCODOEFOGOAOBCOD';
+  // private B = 'CODOEFOGOAOBCODOEFOGOA';
+  // private G = 'OAOBCODOEFOGOAOBCODOEF';
+  // private D = 'OEFOGOAOBCODOEFOGOAOBC';
+  // private A = 'OBCODOEFOGOAOBCODOEFOG';
+  // private Ehigh = 'FOGOAOBCODOEFOGOAOBCOD';
+  private Elow = 'FXGXAXBCXDXEFXGXAXBCXD';
+  private B = 'CXDXEFXGXAXBCXDXEFXGXA';
+  private G = 'XAXBCXDXEFXGXAXBCXDXEF';
+  private D = 'XEFXGXAXBCXDXEFXGXAXBC';
+  private A = 'XBCXDXEFXGXAXBCXDXEFXG';
+  private Ehigh = 'FXGXAXBCXDXEFXGXAXBCXD';
 
   // Overlay color for various notes
   private AOverlayColor = 'rgba(255, 198, 0, 1)';
@@ -54,7 +60,7 @@ export class NotesComponent implements OnInit {
       if (filter === '*' || filter === ch) {
         splittedNotes.push(ch);
       } else {
-        splittedNotes.push('O');
+        splittedNotes.push('X');
       }
     }
     return splittedNotes;
