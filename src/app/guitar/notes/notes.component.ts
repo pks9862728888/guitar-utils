@@ -30,10 +30,10 @@ export class NotesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.filteredNotes = this.filterNotes('*');
+    this.filterNotes('*');
   }
 
-  filterNotes(filter: string): string[][]{
+  filterNotes(filter: string) {
     var notes: string[][] = [];
     notes.push(this.getSplittedNotes(this.Elow, filter));
     notes.push(this.getSplittedNotes(this.B, filter));
@@ -42,7 +42,7 @@ export class NotesComponent implements OnInit {
     notes.push(this.getSplittedNotes(this.A, filter));
     notes.push(this.getSplittedNotes(this.Ehigh, filter));
 
-    return notes;
+    this.filteredNotes = notes;
   }
 
   getSplittedNotes(notes: string, filter: string): string[] {

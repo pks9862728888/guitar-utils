@@ -1,6 +1,39 @@
 <app-fretboard></app-fretboard>
 <section class="note-section">
     <div *ngFor="let stringNotes of filteredNotes" class="m-b-55r">
-        <app-note *ngFor="let note of stringNotes" [noteName]="note" [rgbaOverlayColor]="getOverlayColor(note)" class="m-r-55r"></app-note>
+        <app-note *ngFor="let note of stringNotes" [noteName]="note" [rgbaOverlayColor]="getOverlayColor(note)" class="m-r-89r"></app-note>
     </div>
 </section>
+<div class="m-l-15r d-flex">
+    <div class="p-r-1r">
+        <h5>Filters:</h5>
+    </div>
+    <div class="p-r-1r" (click)="filterNotes('*')">
+        <input type="radio" id="all" name="note" class="m-r-05r" checked="true">
+        <label for="all">All</label>
+    </div>
+    <div class="p-r-1r" (click)="filterNotes('A')">
+        <input type="radio" id="A" name="note" class="m-r-05r">
+        <label for="A">A</label>
+    </div>
+    <div class="p-r-1r" (click)="filterNotes('B')">
+        <input type="radio" id="B" name="note" class="m-r-05r">
+        <label for="B">B</label>
+    </div>
+    <div class="p-r-1r" (click)="filterNotes('C')">
+        <input type="radio" id="C" name="note" class="m-r-05r">
+        <label for="C">C</label>
+    </div>
+    <div class="p-r-1r" (click)="filterNotes('D')">
+        <input type="radio" id="D" name="note" class="m-r-05r">
+        <label for="D">D</label>
+    </div>
+    <div class="p-r-1r" (click)="filterNotes('E')">
+        <input type="radio" id="E" name="note" class="m-r-05r">
+        <label for="E">E</label>
+    </div>
+    <div class="p-r-1r" (click)="filterNotes('F')">
+        <input type="radio" id="F" name="note" class="m-r-05r">
+        <label for="F">F</label>
+    </div>
+</div>
